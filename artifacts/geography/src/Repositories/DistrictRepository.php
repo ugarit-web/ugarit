@@ -61,7 +61,7 @@ class DistrictRepository implements DistrictRepositoryContract
     public function save(SaveDistrictDTO $dto): DistrictDTO
     {
         // Locate existing district model or create a fresh instance
-        $m = $dto->id ? District::query()->findOrFail($dto->id) : new District();
+        $m = $dto->id ? District::query()->findOrFail($dto->id) : new District;
 
         // Fill attributes from DTO and persist
         $m->fill($dto->toPersistenceArray());

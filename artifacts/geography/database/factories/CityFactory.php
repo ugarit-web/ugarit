@@ -41,8 +41,6 @@ class CityFactory extends Factory
 
     /**
      * Indicate that the city is inactive.
-     *
-     * @return static
      */
     public function inactive(): static
     {

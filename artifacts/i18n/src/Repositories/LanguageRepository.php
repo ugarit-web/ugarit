@@ -54,7 +54,7 @@ class LanguageRepository implements LanguageRepositoryContract
     public function save(SaveLanguageDTO $dto): LanguageDTO
     {
         // Find existing language model or instantiate a fresh instance
-        $m = $dto->id ? Language::query()->findOrFail($dto->id) : new Language();
+        $m = $dto->id ? Language::query()->findOrFail($dto->id) : new Language;
 
         // Fill attributes from DTO and persist
         $m->fill($dto->toPersistenceArray());

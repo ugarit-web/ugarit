@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Ugarit\Artifacts\Geography\Models;
 
+use Heritage\Database\Eloquent\Collection;
 use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\HasMany;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -27,9 +29,9 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property string|null $currency_code Standard 3-letter currency code (ISO 4217).
  * @property string|null $flag_emoji Unicode emoji representation of the flag.
  * @property bool $is_active Operational activation flag.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
- * @property-read \Heritage\Database\Eloquent\Collection<int, Governorate> $governorates Collection of child governorates.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
+ * @property-read Collection<int, Governorate> $governorates Collection of child governorates.
  */
 class Country extends Model
 {

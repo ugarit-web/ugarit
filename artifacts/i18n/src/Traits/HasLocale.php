@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Ugarit\Artifacts\I18n\Traits;
 
-use Ugarit\Artifacts\I18n\DTOs\LocaleDTO;
-
 /**
  * Trait HasLocale
  *

@@ -7,6 +7,8 @@ namespace Ugarit\Artifacts\I18n\Models;
 use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\MorphTo;
+use Heritage\Support\Carbon;
+
 /**
  * Class Translation
  *
@@ -23,8 +25,8 @@ use Heritage\Database\Eloquent\Relations\MorphTo;
  * @property string $locale Target language/locale code (e.g. 'ar', 'en').
  * @property string $key Translatable attribute key name (e.g. 'name', 'bio').
  * @property string $value Localized string or text content.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  * @property-read Model $translatable Polymorphically associated target model instance.
  */
 class Translation extends Model

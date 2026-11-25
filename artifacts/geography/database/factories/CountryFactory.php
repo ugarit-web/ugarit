@@ -32,13 +32,13 @@ class CountryFactory extends Factory
     {
         // Generate random unique ISO alpha-2 and alpha-3 codes
         $alpha2 = strtoupper(fake()->unique()->lexify('??'));
-        $alpha3 = strtoupper($alpha2 . fake()->lexify('?'));
+        $alpha3 = strtoupper($alpha2.fake()->lexify('?'));
 
         return [
             'name' => fake()->country(),
             'iso_alpha_2' => $alpha2,
             'iso_alpha_3' => $alpha3,
-            'dial_code' => '+' . fake()->numberBetween(1, 999),
+            'dial_code' => '+'.fake()->numberBetween(1, 999),
             'currency_code' => strtoupper(fake()->lexify('???')),
             'flag_emoji' => '🌐',
             'is_active' => true,
@@ -47,8 +47,6 @@ class CountryFactory extends Factory
 
     /**
      * Indicate that the country is inactive.
-     *
-     * @return static
      */
     public function inactive(): static
     {

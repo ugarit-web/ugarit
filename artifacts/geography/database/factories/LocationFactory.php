@@ -35,7 +35,7 @@ class LocationFactory extends Factory
         return [
             'city_id' => City::factory(),
             'district_id' => District::factory(),
-            'name' => fake()->company() . ' Center',
+            'name' => fake()->company().' Center',
             'latitude' => fake()->latitude(20.0, 30.0),
             'longitude' => fake()->longitude(35.0, 50.0),
             'address_line' => fake()->streetAddress(),

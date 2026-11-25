@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ugarit\Artifacts\I18n\Database\Seeders;
 
 use Heritage\Database\ArtifactSeeder;
+use Heritage\Database\Seeder;
 
 /**
  * Class I18nDatabaseSeeder
@@ -20,7 +21,7 @@ class I18nDatabaseSeeder extends ArtifactSeeder
     /**
      * Map of i18n domain tables to their dedicated seeder classes.
      *
-     * @var array<string, class-string<\Heritage\Database\Seeder>>
+     * @var array<string, class-string<Seeder>>
      */
     protected array $tableSeeders = [
         'languages' => LanguageSeeder::class,

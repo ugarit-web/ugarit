@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Ugarit\Artifacts\Geography\Models;
 
+use Heritage\Database\Eloquent\Collection;
 use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\BelongsTo;
 use Heritage\Database\Eloquent\Relations\HasMany;
 use Heritage\Database\Eloquent\Relations\HasOneThrough;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -29,12 +31,12 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property string|null $code Optional administrative district code.
  * @property string|null $postal_code Postal or zip code of the district.
  * @property bool $is_active Operational activation flag.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  * @property-read City $city Parent city instance.
  * @property-read Governorate|null $governorate Parent governorate resolved through city.
  * @property-read Country|null $country Sovereign country resolved through governorate.
- * @property-read \Heritage\Database\Eloquent\Collection<int, Location> $locations Physical locations situated in this district.
+ * @property-read Collection<int, Location> $locations Physical locations situated in this district.
  */
 class District extends Model
 {

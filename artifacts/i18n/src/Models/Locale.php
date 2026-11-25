@@ -6,6 +6,7 @@ namespace Ugarit\Artifacts\I18n\Models;
 
 use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -25,8 +26,8 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property string|null $regional Regional locale code (e.g. 'ar_SA', 'en_US').
  * @property bool $is_default System default locale indicator.
  * @property bool $is_active Operational activation flag.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  */
 class Locale extends Model
 {

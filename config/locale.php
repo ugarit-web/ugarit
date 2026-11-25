@@ -122,13 +122,13 @@ return [
          * Regional tag points to Saudi Arabia (ar_SA) as the canonical reference.
          */
         'ar' => [
-            'code'      => 'ar',
-            'name'      => 'Arabic',
-            'native'    => 'العربية',
+            'code' => 'ar',
+            'name' => 'Arabic',
+            'native' => 'العربية',
             'direction' => 'rtl',
-            'script'    => 'Arab',
-            'regional'  => 'ar_SA',
-            'flag'      => '🇸🇦',
+            'script' => 'Arab',
+            'regional' => 'ar_SA',
+            'flag' => '🇸🇦',
         ],
 
         /**
@@ -138,13 +138,13 @@ return [
          * Regional tag points to the United States (en_US) as the canonical reference.
          */
         'en' => [
-            'code'      => 'en',
-            'name'      => 'English',
-            'native'    => 'English',
+            'code' => 'en',
+            'name' => 'English',
+            'native' => 'English',
             'direction' => 'ltr',
-            'script'    => 'Latn',
-            'regional'  => 'en_US',
-            'flag'      => '🇺🇸',
+            'script' => 'Latn',
+            'regional' => 'en_US',
+            'flag' => '🇺🇸',
         ],
 
     ],

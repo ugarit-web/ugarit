@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ugarit\Artifacts\Geography\Database\Seeders;
 
 use Heritage\Database\ArtifactSeeder;
+use Heritage\Database\Seeder;
 
 /**
  * Class GeographyDatabaseSeeder
@@ -21,7 +22,7 @@ class GeographyDatabaseSeeder extends ArtifactSeeder
     /**
      * Map of geography domain tables to their dedicated seeder classes.
      *
-     * @var array<string, class-string<\Heritage\Database\Seeder>>
+     * @var array<string, class-string<Seeder>>
      */
     protected array $tableSeeders = [
         'countries' => CountrySeeder::class,

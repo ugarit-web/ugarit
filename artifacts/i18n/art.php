@@ -15,22 +15,16 @@ return new class extends Artifact
 {
     /**
      * The unique identifier for the artifact.
-     *
-     * @var string
      */
     public string $id = 'i18n';
 
     /**
      * The human-readable name of the artifact.
-     *
-     * @var string
      */
     public string $name = 'Internationalization & Localization';
 
     /**
      * The semantic version of the artifact.
-     *
-     * @var string
      */
     public string $version = '1.00.00';
 
@@ -40,8 +34,8 @@ return new class extends Artifact
      * @var array<string, string>
      */
     public array $capabilities = [
-        'locales'      => 'Locale management, fallback hierarchy, and directional resolution (RTL/LTR)',
-        'languages'    => 'Language catalog, ISO-639 codes, and native denomination registry',
+        'locales' => 'Locale management, fallback hierarchy, and directional resolution (RTL/LTR)',
+        'languages' => 'Language catalog, ISO-639 codes, and native denomination registry',
         'translations' => 'Dynamic entity translatable attributes and multilingual dictionary storage',
     ];
 
@@ -63,8 +57,6 @@ return new class extends Artifact
 
     /**
      * Bootstrap capability logic for this artifact.
-     *
-     * @return void
      */
     public function boot(): void
     {

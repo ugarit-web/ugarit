@@ -34,7 +34,7 @@ class LanguageFactory extends Factory
 
         return [
             'iso_code' => $code,
-            'name' => fake()->word() . ' Language',
+            'name' => fake()->word().' Language',
             'native_name' => fake()->word(),
             'is_active' => true,
         ];
@@ -42,8 +42,6 @@ class LanguageFactory extends Factory
 
     /**
      * Indicate that the language is inactive.
-     *
-     * @return static
      */
     public function inactive(): static
     {

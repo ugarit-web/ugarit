@@ -9,6 +9,7 @@ use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\BelongsTo;
 use Heritage\Database\Eloquent\Relations\HasMany;
 use Heritage\Database\Eloquent\Relations\HasOneThrough;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -25,8 +26,8 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property string $name Primary default localized city name.
  * @property string|null $postal_code Official regional postal or zip code.
  * @property bool $is_active Operational activation flag.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  * @property-read Governorate $governorate Parent governorate instance.
  */
 class City extends Model

@@ -71,7 +71,7 @@ class CountryRepository implements CountryRepositoryContract
     public function save(SaveCountryDTO $dto): CountryDTO
     {
         // Find existing country model or instantiate a new one
-        $m = $dto->id ? Country::query()->findOrFail($dto->id) : new Country();
+        $m = $dto->id ? Country::query()->findOrFail($dto->id) : new Country;
 
         // Fill model attributes and persist to database
         $m->fill($dto->toPersistenceArray());

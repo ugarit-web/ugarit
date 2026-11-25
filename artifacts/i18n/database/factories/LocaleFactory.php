@@ -34,10 +34,10 @@ class LocaleFactory extends Factory
 
         return [
             'code' => $code,
-            'name' => fake()->word() . ' Locale',
+            'name' => fake()->word().' Locale',
             'direction' => 'ltr',
             'script' => 'Latn',
-            'regional' => $code . '_' . strtoupper($code),
+            'regional' => $code.'_'.strtoupper($code),
             'is_default' => false,
             'is_active' => true,
         ];
@@ -45,8 +45,6 @@ class LocaleFactory extends Factory
 
     /**
      * Indicate that the locale is the system default.
-     *
-     * @return static
      */
     public function default(): static
     {
@@ -57,8 +55,6 @@ class LocaleFactory extends Factory
 
     /**
      * Indicate that the locale text direction is right-to-left.
-     *
-     * @return static
      */
     public function rtl(): static
     {

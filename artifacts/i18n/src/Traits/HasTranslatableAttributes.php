@@ -29,7 +29,6 @@ trait HasTranslatableAttributes
      * Override save to ensure pending translations are saved even when model events are muted.
      *
      * @param  array<string, mixed>  $options  Save options.
-     * @return bool
      */
     public function save(array $options = []): bool
     {
@@ -44,8 +43,6 @@ trait HasTranslatableAttributes
 
     /**
      * Override delete to ensure polymorphic translations are cleaned up even when model events are muted.
-     *
-     * @return bool|null
      */
     public function delete(): ?bool
     {
@@ -66,8 +63,6 @@ trait HasTranslatableAttributes
      *
      * Registers model event hooks to persist pending translations upon save
      * and clean up orphaned translations upon deletion.
-     *
-     * @return void
      */
     public static function bootHasTranslatableAttributes(): void
     {
@@ -89,8 +84,6 @@ trait HasTranslatableAttributes
 
     /**
      * Define the polymorphic one-to-many relationship with Translation records.
-     *
-     * @return Relation
      */
     public function translations(): Relation
     {
@@ -102,7 +95,6 @@ trait HasTranslatableAttributes
      *
      * @param  string  $key  Attribute name.
      * @param  string|null  $locale  Target locale code.
-     * @return mixed
      */
     public function getTranslatedAttribute(string $key, ?string $locale = null): mixed
     {
@@ -113,7 +105,6 @@ trait HasTranslatableAttributes
      * Get the fallback value for a translatable attribute directly from model attributes.
      *
      * @param  string  $key  Attribute name.
-     * @return mixed
      */
     public function getTranslatableFallbackValue(string $key): mixed
     {
@@ -122,8 +113,6 @@ trait HasTranslatableAttributes
 
     /**
      * Framework compatibility hook to save queued translations.
-     *
-     * @return void
      */
     public function savePendingTranslations(): void
     {
@@ -144,7 +133,6 @@ trait HasTranslatableAttributes
      * Determine whether a given attribute key is registered as translatable.
      *
      * @param  string  $key  Attribute name.
-     * @return bool
      */
     public function isTranslatableAttribute(string $key): bool
     {
@@ -156,7 +144,6 @@ trait HasTranslatableAttributes
      * when accessing translatable properties.
      *
      * @param  string  $key  Attribute name.
-     * @return mixed
      */
     public function getAttribute($key): mixed
     {
@@ -177,7 +164,6 @@ trait HasTranslatableAttributes
      *
      * @param  string  $key  Attribute name.
      * @param  mixed  $value  Raw string value or associative array of [locale => value].
-     * @return mixed
      */
     public function setAttribute($key, $value): mixed
     {
@@ -240,7 +226,6 @@ trait HasTranslatableAttributes
      *
      * @param  string  $key  Attribute key name.
      * @param  array<string, string>  $translations  Associative array of [locale => translation].
-     * @return static
      */
     public function setTranslations(string $key, array $translations): static
     {
@@ -257,7 +242,6 @@ trait HasTranslatableAttributes
      * @param  string  $key  Attribute key name.
      * @param  string|null  $locale  Target locale code (defaults to active application locale).
      * @param  bool  $useFallback  Whether to cascade to fallback locale if translation is missing.
-     * @return mixed
      */
     public function getTranslation(string $key, ?string $locale = null, bool $useFallback = true): mixed
     {
@@ -307,7 +291,6 @@ trait HasTranslatableAttributes
      * @param  string  $key  Attribute key name.
      * @param  mixed  $value  Translation value.
      * @param  string|null  $locale  Target locale code (defaults to active application locale).
-     * @return static
      */
     public function setTranslation(string $key, mixed $value, ?string $locale = null): static
     {
@@ -329,8 +312,6 @@ trait HasTranslatableAttributes
 
     /**
      * Persist any translations queued in memory after model creation.
-     *
-     * @return void
      */
     public function saveQueuedTranslations(): void
     {
@@ -357,7 +338,6 @@ trait HasTranslatableAttributes
      * @param  string  $key  Translatable attribute name.
      * @param  mixed  $value  Expected translation value.
      * @param  string|null  $locale  Target locale.
-     * @return Builder
      */
     public function scopeWhereTranslation(Builder $query, string $key, mixed $value, ?string $locale = null): Builder
     {
@@ -377,7 +357,6 @@ trait HasTranslatableAttributes
      * @param  string  $key  Translatable attribute name.
      * @param  string  $pattern  SQL like pattern (e.g. '%term%').
      * @param  string|null  $locale  Target locale.
-     * @return Builder
      */
     public function scopeWhereTranslationLike(Builder $query, string $key, string $pattern, ?string $locale = null): Builder
     {

@@ -1,6 +1,14 @@
 <?php
 
 declare(strict_types=1);
+use Ugarit\Artifacts\I18n\Database\Seeders\I18nDatabaseSeeder;
+use Ugarit\Artifacts\I18n\Database\Seeders\LanguageSeeder;
+use Ugarit\Artifacts\I18n\Database\Seeders\LocaleSeeder;
+use Ugarit\Artifacts\I18n\Database\Seeders\TranslationSeeder;
+use Ugarit\Artifacts\I18n\Models\Language;
+use Ugarit\Artifacts\I18n\Models\Locale;
+use Ugarit\Artifacts\I18n\Models\Translation;
+use Ugarit\Artifacts\I18n\Providers\I18nServiceProvider;
 
 /**
  * Ugarit Internationalization (i18n) Artifact Configuration
@@ -29,7 +37,7 @@ return [
         'description' => 'Core localization, language resolution, dynamic content translation, and multilingual routing artifact for the Ugarit Ecosystem.',
         'author' => 'Muath R Abu Ouda <muathrabuouda@hotmail.com>',
         'license' => 'MIT',
-        'provider' => \Ugarit\Artifacts\I18n\Providers\I18nServiceProvider::class,
+        'provider' => I18nServiceProvider::class,
         'tags' => [
             'i18n',
             'localization',
@@ -50,9 +58,9 @@ return [
      * domain. Registering them here permits custom model extensions and bindings.
      */
     'models' => [
-        'locale' => \Ugarit\Artifacts\I18n\Models\Locale::class,
-        'language' => \Ugarit\Artifacts\I18n\Models\Language::class,
-        'translation' => \Ugarit\Artifacts\I18n\Models\Translation::class,
+        'locale' => Locale::class,
+        'language' => Language::class,
+        'translation' => Translation::class,
     ],
 
     /**
@@ -246,11 +254,11 @@ return [
      * Defines the master modular entrypoint seeder and individual table seeders.
      */
     'seeders' => [
-        'entrypoint' => \Ugarit\Artifacts\I18n\Database\Seeders\I18nDatabaseSeeder::class,
+        'entrypoint' => I18nDatabaseSeeder::class,
         'tables' => [
-            'languages' => \Ugarit\Artifacts\I18n\Database\Seeders\LanguageSeeder::class,
-            'locales' => \Ugarit\Artifacts\I18n\Database\Seeders\LocaleSeeder::class,
-            'translations' => \Ugarit\Artifacts\I18n\Database\Seeders\TranslationSeeder::class,
+            'languages' => LanguageSeeder::class,
+            'locales' => LocaleSeeder::class,
+            'translations' => TranslationSeeder::class,
         ],
     ],
 ];

@@ -61,7 +61,7 @@ class CityRepository implements CityRepositoryContract
     public function save(SaveCityDTO $dto): CityDTO
     {
         // Locate existing city model or create a fresh instance
-        $m = $dto->id ? City::query()->findOrFail($dto->id) : new City();
+        $m = $dto->id ? City::query()->findOrFail($dto->id) : new City;
 
         // Fill attributes from DTO and persist
         $m->fill($dto->toPersistenceArray());

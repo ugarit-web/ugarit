@@ -33,7 +33,7 @@ class DistrictFactory extends Factory
     {
         return [
             'city_id' => City::factory(),
-            'name' => fake()->streetName() . ' District',
+            'name' => fake()->streetName().' District',
             'code' => strtoupper(fake()->lexify('DIST-???')),
             'postal_code' => fake()->postcode(),
             'is_active' => true,
@@ -42,8 +42,6 @@ class DistrictFactory extends Factory
 
     /**
      * Indicate that the district is inactive.
-     *
-     * @return static
      */
     public function inactive(): static
     {

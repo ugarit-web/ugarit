@@ -18,8 +18,6 @@ class AppSeeder extends Seeder
 {
     /**
      * Seed the application's database with domain artifact records.
-     *
-     * @return void
      */
     public function run(): void
     {

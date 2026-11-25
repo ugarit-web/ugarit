@@ -1,6 +1,18 @@
 <?php
 
 declare(strict_types=1);
+use Ugarit\Artifacts\Geography\Database\Seeders\CitySeeder;
+use Ugarit\Artifacts\Geography\Database\Seeders\CountrySeeder;
+use Ugarit\Artifacts\Geography\Database\Seeders\DistrictSeeder;
+use Ugarit\Artifacts\Geography\Database\Seeders\GeographyDatabaseSeeder;
+use Ugarit\Artifacts\Geography\Database\Seeders\GovernorateSeeder;
+use Ugarit\Artifacts\Geography\Database\Seeders\LocationSeeder;
+use Ugarit\Artifacts\Geography\Models\City;
+use Ugarit\Artifacts\Geography\Models\Country;
+use Ugarit\Artifacts\Geography\Models\District;
+use Ugarit\Artifacts\Geography\Models\Governorate;
+use Ugarit\Artifacts\Geography\Models\Location;
+use Ugarit\Artifacts\Geography\Providers\GeographyServiceProvider;
 
 /**
  * Ugarit Geography Artifact Configuration
@@ -29,7 +41,7 @@ return [
         'description' => 'Comprehensive spatial and territorial boundary management artifact for the Ugarit Ecosystem, managing countries, governorates, cities, districts, and coordinates.',
         'author' => 'Muath R Abu Ouda <muathrabuouda@hotmail.com>',
         'license' => 'MIT',
-        'provider' => \Ugarit\Artifacts\Geography\Providers\GeographyServiceProvider::class,
+        'provider' => GeographyServiceProvider::class,
         'tags' => [
             'geography',
             'gis',
@@ -52,11 +64,11 @@ return [
      * domain. Registering them here permits custom model extensions and bindings.
      */
     'models' => [
-        'country' => \Ugarit\Artifacts\Geography\Models\Country::class,
-        'governorate' => \Ugarit\Artifacts\Geography\Models\Governorate::class,
-        'city' => \Ugarit\Artifacts\Geography\Models\City::class,
-        'district' => \Ugarit\Artifacts\Geography\Models\District::class,
-        'location' => \Ugarit\Artifacts\Geography\Models\Location::class,
+        'country' => Country::class,
+        'governorate' => Governorate::class,
+        'city' => City::class,
+        'district' => District::class,
+        'location' => Location::class,
     ],
 
     /**
@@ -226,13 +238,13 @@ return [
      * Defines the master modular entrypoint seeder and individual table seeders.
      */
     'seeders' => [
-        'entrypoint' => \Ugarit\Artifacts\Geography\Database\Seeders\GeographyDatabaseSeeder::class,
+        'entrypoint' => GeographyDatabaseSeeder::class,
         'tables' => [
-            'countries' => \Ugarit\Artifacts\Geography\Database\Seeders\CountrySeeder::class,
-            'governorates' => \Ugarit\Artifacts\Geography\Database\Seeders\GovernorateSeeder::class,
-            'cities' => \Ugarit\Artifacts\Geography\Database\Seeders\CitySeeder::class,
-            'districts' => \Ugarit\Artifacts\Geography\Database\Seeders\DistrictSeeder::class,
-            'locations' => \Ugarit\Artifacts\Geography\Database\Seeders\LocationSeeder::class,
+            'countries' => CountrySeeder::class,
+            'governorates' => GovernorateSeeder::class,
+            'cities' => CitySeeder::class,
+            'districts' => DistrictSeeder::class,
+            'locations' => LocationSeeder::class,
         ],
     ],
 ];

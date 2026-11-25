@@ -61,7 +61,7 @@ class LocationRepository implements LocationRepositoryContract
     public function save(SaveLocationDTO $dto): LocationDTO
     {
         // Locate existing location model or instantiate a new one
-        $m = $dto->id ? Location::query()->findOrFail($dto->id) : new Location();
+        $m = $dto->id ? Location::query()->findOrFail($dto->id) : new Location;
 
         // Fill attributes from DTO and persist
         $m->fill($dto->toPersistenceArray());

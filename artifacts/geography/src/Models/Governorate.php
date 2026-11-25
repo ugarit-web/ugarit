@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Ugarit\Artifacts\Geography\Models;
 
+use Heritage\Database\Eloquent\Collection;
 use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\BelongsTo;
 use Heritage\Database\Eloquent\Relations\HasMany;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -25,10 +27,10 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property string $name Primary localized governorate/province name.
  * @property string|null $code Official administrative regional code.
  * @property bool $is_active Operational activation flag.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  * @property-read Country $country Parent country instance.
- * @property-read \Heritage\Database\Eloquent\Collection<int, City> $cities Collection of child cities.
+ * @property-read Collection<int, City> $cities Collection of child cities.
  */
 class Governorate extends Model
 {

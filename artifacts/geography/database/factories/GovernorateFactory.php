@@ -33,7 +33,7 @@ class GovernorateFactory extends Factory
     {
         return [
             'country_id' => Country::factory(),
-            'name' => fake()->city() . ' Province',
+            'name' => fake()->city().' Province',
             'code' => strtoupper(fake()->lexify('??')),
             'is_active' => true,
         ];
@@ -41,8 +41,6 @@ class GovernorateFactory extends Factory
 
     /**
      * Indicate that the governorate is inactive.
-     *
-     * @return static
      */
     public function inactive(): static
     {

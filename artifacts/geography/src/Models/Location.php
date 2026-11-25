@@ -8,6 +8,7 @@ use Heritage\Database\Eloquent\Factories\HasFactory;
 use Heritage\Database\Eloquent\Model;
 use Heritage\Database\Eloquent\Relations\BelongsTo;
 use Heritage\Database\Eloquent\Relations\HasOneThrough;
+use Heritage\Support\Carbon;
 use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
 
 /**
@@ -27,8 +28,8 @@ use Ugarit\Artifacts\I18n\Traits\HasTranslatableAttributes;
  * @property float|null $longitude GPS longitude coordinate.
  * @property string|null $address_line Detailed physical street address line.
  * @property string|null $postal_code Postal or zip code of the facility.
- * @property \Heritage\Support\Carbon|null $created_at Timestamp of record creation.
- * @property \Heritage\Support\Carbon|null $updated_at Timestamp of last update.
+ * @property Carbon|null $created_at Timestamp of record creation.
+ * @property Carbon|null $updated_at Timestamp of last update.
  * @property-read City|null $city Associated city model if present.
  */
 class Location extends Model

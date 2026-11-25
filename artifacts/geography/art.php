@@ -29,11 +29,11 @@ return new class extends Artifact
      * @var array<string, string>
      */
     public array $capabilities = [
-        'countries'    => 'ISO-3166 countries, capitals, currencies, dialing codes, and flags',
+        'countries' => 'ISO-3166 countries, capitals, currencies, dialing codes, and flags',
         'governorates' => 'First-level administrative divisions, provinces, and states',
-        'cities'       => 'Cities, municipalities, and localized urban regions',
-        'districts'    => 'Districts, neighborhoods, and municipal subdivisions',
-        'locations'    => 'Geospatial coordinates, latitude/longitude, and addresses',
+        'cities' => 'Cities, municipalities, and localized urban regions',
+        'districts' => 'Districts, neighborhoods, and municipal subdivisions',
+        'locations' => 'Geospatial coordinates, latitude/longitude, and addresses',
     ];
 
     /**

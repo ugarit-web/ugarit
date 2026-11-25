@@ -61,7 +61,7 @@ class GovernorateRepository implements GovernorateRepositoryContract
     public function save(SaveGovernorateDTO $dto): GovernorateDTO
     {
         // Find existing governorate model or instantiate a fresh instance
-        $m = $dto->id ? Governorate::query()->findOrFail($dto->id) : new Governorate();
+        $m = $dto->id ? Governorate::query()->findOrFail($dto->id) : new Governorate;
 
         // Fill attributes from DTO and persist
         $m->fill($dto->toPersistenceArray());
