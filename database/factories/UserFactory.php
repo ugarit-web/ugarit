@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use Heritage\Database\Eloquent\Factories\Factory;
 use Heritage\Support\Facades\Hash;
 use Heritage\Support\Str;
+use Ugarit\Artifacts\Users\Models\User;
 
 /**
  * @extends Factory<User>

@@ -6,6 +6,7 @@ use Heritage\Foundation\Configuration\Middleware;
 use Heritage\Http\Request;
 
 return Application::configure(basePath: dirname(__DIR__))
+    ->withNamespace('Apps\\')
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
         commands: __DIR__.'/../routes/console.php',

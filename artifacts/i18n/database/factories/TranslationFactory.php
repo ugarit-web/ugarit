@@ -31,7 +31,7 @@ class TranslationFactory extends Factory
     public function definition(): array
     {
         return [
-            'translatable_type' => 'App\\Models\\Sample',
+            'translatable_type' => 'Ugarit\\Artifacts\\I18n\\Models\\Sample',
             'translatable_id' => fake()->randomNumber(4),
             'locale' => 'en',
             'key' => fake()->word(),

@@ -1,0 +1,31 @@
+{
+    "name": "ugarit-artifacts/users",
+    "description": "Users domain artifact for Ugarit",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ugarit/framework": "^1.00.00"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Artifacts\\Users\\": "src/",
+            "Ugarit\\Artifacts\\Users\\Database\\Factories\\": "database/factories/",
+            "Ugarit\\Artifacts\\Users\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "extra": {
+        "ugarit": {
+            "providers": [
+                "Ugarit\\Artifacts\\Users\\Providers\\UsersServiceProvider"
+            ]
+        }
+    }
+}

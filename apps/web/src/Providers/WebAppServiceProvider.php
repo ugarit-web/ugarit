@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Providers;
+declare(strict_types=1);
+
+namespace Apps\Web\Providers;
 
 use Heritage\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class WebAppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.

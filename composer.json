@@ -34,11 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
+            "Apps\\Web\\": "apps/web/src/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Ugarit\\Artifacts\\Geography\\": "artifacts/geography/src/",
-            "Ugarit\\Artifacts\\I18n\\": "artifacts/i18n/src/"
+            "Ugarit\\Artifacts\\I18n\\": "artifacts/i18n/src/",
+            "Ugarit\\Artifacts\\Users\\": "artifacts/users/src/"
         }
     },
     "autoload-dev": {

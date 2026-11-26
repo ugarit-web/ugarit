@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Heritage\Database\Console\Seeds\WithoutModelEvents;
 use Heritage\Database\Seeder;
+use Ugarit\Artifacts\Users\Models\User;
 
 class DatabaseSeeder extends Seeder
 {

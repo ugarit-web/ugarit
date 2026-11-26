@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use Ugarit\Artifacts\Users\Models\User;
 
 return [
 
