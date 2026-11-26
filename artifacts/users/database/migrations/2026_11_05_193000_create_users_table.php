@@ -9,8 +9,8 @@ use Heritage\Support\Facades\Schema;
 /**
  * Migration: create_users_table
  *
- * Owned by the Users artifact. Stores individual human accounts associated
- * with an underlying entity record, using username as the primary unique identifier.
+ * Owned by the Users artifact. Stores application user accounts
+ * with support for authentication and security credentials.
  */
 return new class extends Migration
 {
@@ -20,21 +20,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            // Primary and foreign identifier referencing the unified entity
-            $table->foreignId('entity_id')->primary()->constrained('entities')->cascadeOnDelete();
-
-            // Unique username used as primary account identifier
-            $table->string('username')->unique();
-
-            // Remember me token for persistent authenticated sessions
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->rememberToken();
-
-            // Two-factor authentication credentials
-            $table->text('two_factor_secret')->nullable();
-            $table->text('two_factor_recovery_codes')->nullable();
-            $table->timestamp('two_factor_confirmed_at')->nullable();
-
-            // Record creation and update timestamps
             $table->timestamps();
         });
     }

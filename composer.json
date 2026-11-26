@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "ugarit/framework": "^1.04.01",
+        "ugarit/framework": "^1.04.02",
         "ugarit/tinker": "^1.00.00"
     },
     "require-dev": {
