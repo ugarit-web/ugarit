@@ -9,12 +9,9 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
     "concurrently": "^10.0.3",
-    "ugarit-vite-plugin": "^3.1",
     "tailwindcss": "^4.0.0",
+    "ugarit-vite-plugin": "github:ugarit-web/vite-plugin#v1.00.01",
     "vite": "^8.0.0"
-  },
-  "optionalDependencies": {
-    "@ugarit/multiplex": "^0.4.1"
   },
   "version": "1.00.00"
 }
